@@ -4,9 +4,8 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "turbo watch dev --filter=baseline-nextjs",
-    "prettier": "prettier -c .",
-    "typecheck": "turbo typecheck --continue"
+    "dev": "turbo watch domain-app#dev main-app#dev",
+    "prettier": "prettier -c ."
   },
   "dependencies": {
     "@trivago/prettier-plugin-sort-imports": "^4.3.0",
