@@ -25,9 +25,12 @@ function App() {
       <div className="w-[20rem] h-full bg-yellow-200" />
       <div className="flex flex-col gap-4 w-full h-full">
         <div className="h-[3rem] w-full bg-red-200" />
-        <iframe src="http://localhost:3000" className="h-full w-full" />
         <iframe
-          src={`http://localhost:3001?modal=${modal}`}
+          src={import.meta.env.VITE_DOMAIN_APP_URL}
+          className="h-full w-full"
+        />
+        <iframe
+          src={`${import.meta.env.VITE_DOMAIN_APP_URL}/overlay?modal=${modal}`}
           className={`fixed inset-0 w-screen h-screen ${modal ? "" : "hidden"}`}
           allowTransparency
         />
